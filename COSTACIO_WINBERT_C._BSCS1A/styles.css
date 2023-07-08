@@ -1,0 +1,338 @@
+/*styles.css*/
+*{
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+html{
+	box-sizing: border-box;
+	height: 100%;
+}
+body{
+	font-family: New York;
+	background-image: url("background.jpg");
+	background-size: cover;
+	position: relative;
+	padding-bottom: 7rem;
+	box-sizing: inherit;
+	min-height: 100%;
+}
+.menu-bar{
+	background: black;
+	height: 80px;
+	width: 100vw;
+}
+.menu-bar label.logo{
+	padding: 0 20px;
+}
+.menu-bar ul{
+	float: right;
+	margin-right: 20px;
+}
+.menu-bar ul li{
+	display: inline;
+	line-height: 80px;
+	margin: 0 5px;
+}
+.menu-bar ul li a{
+	color: white;
+	font-size: 20px;
+	padding: 7px 13px;
+	border-radius: 3px;
+	text-transform: uppercase;	
+}
+a.active, a:hover{
+	background: gray;
+	transition: .5s;
+	background: none;
+	color: white;
+}
+.bars{
+	font-size: 30px;
+	color: white;
+	float: right;
+	line-height: 80px;
+	margin-right: 40px;
+	cursor: pointer;
+	display: none;
+}
+.sub-menu-1{
+	display: none;
+}
+.menu-bar ul li:hover .sub-menu-1{
+	display: block;
+	position: absolute;
+    background: black;
+	margin-top:-25px;
+	margin-left:126.3px;
+	margin-right:300px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+	display: block;
+	margin:0.8px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+	color: gray;
+}
+.sub-menu-2{
+	display: none;
+}
+.menu-bar ul li:hover .sub-menu-2{
+	display: block;
+	position: absolute;
+    background: black;
+	margin-top:-25px;
+	margin-left:259.5px;
+	margin-right:300px;
+}
+.menu-bar ul li:hover .sub-menu-2 ul{
+	display: block;
+	margin: 0.8px;
+}
+.menu-bar ul li:hover .sub-menu-2 ul li a:hover{
+	color: gray;
+}
+.sub-menu-3{
+	display: none;
+}
+.menu-bar ul li:hover .sub-menu-3{
+	display: block;
+	position: absolute;
+    background: black;
+	margin-top:-25px;
+	margin-left:425px;
+	margin-right:300px;
+}
+.menu-bar ul li:hover .sub-menu-3 ul{
+	display: block;
+	margin: 0.8px;
+}
+.menu-bar ul li:hover .sub-menu-3 ul li a:hover{
+	color: gray;
+}
+#check{
+display: none;
+}
+@media screen and (max-width: 910px){
+	.bars{
+		display: flex;
+		margin-top: 5%;
+	}
+	ul{
+		position: fixed;
+		width: 100vw;
+		height:100vh;
+		background: black;
+		top: 80px;
+		left: -110%;
+		padding: 0;
+		text-align: center;
+		transition: all .5s;		
+	}
+	.menu-bar ul li{
+		display: block;
+		margin: 50px 0;
+		line-height: 35px;
+	}
+	.menu-bar ul li a{
+		font-size:25px;
+	}
+	.active, .menu-bar ul li:hover{
+		background: none;
+		color: gray;
+		background: transparent;
+	}
+	#check:checked ~ ul{
+		left: 0;
+	}
+	.Home h1{
+		font-size: 25px;
+	}
+	.Home p{
+		font-size: 12px;
+		margin-right: -40%;
+	}
+	.logo img{
+		height: 65px;
+	}
+	.action img{
+		width:100%;
+		display: flex;
+	}
+	.Anime h1{
+		font-size: 25px;
+	}
+	.desc img{
+		max-width: 320px;
+		float: left;
+		margin-right: 15px;
+		width: 60%;
+	}
+	.comment h2{
+		margin-top: -20%;
+	}
+	.desc h1{
+		font-size: 25px;
+	}
+	.desc p{
+		font-size: 15px;
+	}
+	.comment p{
+		font-size: 15px;
+	}
+	.comment h2{
+		font-size: 20px;
+		margin-top: -25%;	
+	}
+	.link a{
+		font-size: 15px;
+	}
+	.link1 h2{
+		font-size: 20px;
+	}
+	.footers footer h1{
+		font-size: 15px;
+	}
+
+}
+.Home{
+	color: white;
+	margin-right: 40%;
+	margin-top: 50px;
+	text-align: justify;
+	font-size: 18px;
+}
+.Title{
+	color: white;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	text-align: center;
+	font-size: 200%;
+	width: auto;
+}
+.Start{
+	color: white;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	position: absolute;
+	width: auto;
+}
+.Anime{
+	color: white;
+	padding: 10px;
+	margin: 10px;
+}
+.action{
+	float: left;
+	width: 35%;
+	margin-right: -8%;
+}
+.action img{
+	width: 75%;
+}
+.action1{
+	display: block;
+}
+.action1 img{
+	width: 60%;
+	margin: 30px;
+	margin-left: 20%;
+}
+.Anime::after{
+	content: "";
+	display: flex;
+	clear: both;
+}
+.desc{
+	margin:120px auto;
+	width: 70%;
+}
+.desc img{
+	max-width: 320px;
+	float: left;
+	margin-right: 15px;
+}
+.info{
+	color: white;
+	text-align: justify;
+	margin-right: 20%;
+	font-size: 20px;
+}
+.link{
+	color: white;
+	text-align: left;
+	font-size: 120%;
+	margin-left: 5%;
+	margin-top: 2%;
+	word-wrap: break-word;
+}
+.link1{
+	color: white;
+	text-align: left;
+	font-size: 120%;
+	margin-left: 15%;
+	margin-right: 20%;
+	margin-top: 5%;
+	border: 5px solid;
+	border-color: rgb(3, 2, 2);
+	background-color: #847996;
+}
+.comment{
+	color: white;
+	text-align: justify;
+	font-size: 20px;
+	margin-top: 10%;
+	margin-left: 15%;
+	margin-right: 20%;
+	border: 5px solid;
+	border-color: black;
+}
+.loader{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: black;
+	transition: opacity 5s, visibility 3s;
+}
+.loader-hidden{
+	opacity: 0;
+	visibility: hidden;
+}
+.loader::after{
+	content: "";
+	width: 75px;
+	height: 75px;
+	border: 15px solid gray;
+	border-top-color:rgb(157, 41, 180) ;
+	border-radius: 50%;
+	animation: loading 0.75s ease infinite;
+}
+@keyframes loading {
+	from{
+		transform: rotate(0turn);
+	}
+	to{
+		transform: rotate(1turn);
+	}
+}
+.footers footer h1{
+	color: white;
+	font-size: 25px;
+}
+.footers{
+	background-color: black;
+	bottom: 0;
+	position: absolute;
+	right: 0;
+	left: 0;
+	text-align: center;
+}
